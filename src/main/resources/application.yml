@@ -1,0 +1,5 @@
+---
+spring:
+  application:
+    name: pal-tracker
+welcome_message: "hello from yaml!"
