@@ -1,0 +1,7 @@
+---
+applications:
+  - name: pal-tracker-tito
+    path: ./build/libs/pal-tracker-0.0.1-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack
+    memory: 1G
