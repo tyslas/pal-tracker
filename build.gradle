@@ -15,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.1")
     compile('org.springframework.boot:spring-boot-starter-web')
     //the below are the dependencies contained in 'spring-boot-starter-web'
 /*    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0.pr1'
@@ -25,6 +26,8 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.1.6.RELEASE'*/
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.mockito:mockito-core:2.23.4")
+
 }
 
 //can use instead of yaml

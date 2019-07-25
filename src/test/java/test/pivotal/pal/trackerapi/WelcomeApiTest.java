@@ -14,7 +14,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = PalTrackerApplication.class, webEnvironment = RANDOM_PORT)
-@Ignore("test can only be run when SPRING_PROFILES_ACTIVE=test")
+//@Ignore("test can only be run when setting SPRING_PROFILES_ACTIVE=test")
+//set via the following commands from terminal: export SPRING_PROFILES_ACTIVE=test && ./gradlew clean build
 public class WelcomeApiTest {
 
     @Autowired
