@@ -4,5 +4,9 @@ spring:
     name: pal-tracker
   datasource:
     url: jdbc:mysql://localhost:3306/tracker_test?user=tracker&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 welcome_message: Hello from test

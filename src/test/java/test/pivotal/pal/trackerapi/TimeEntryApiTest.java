@@ -33,9 +33,6 @@ public class TimeEntryApiTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Value("${spring.datasource.url}")
-    private String datasourceUrl;
-
     private final long projectId = 123L;
     private final long userId = 456L;
     private TimeEntry timeEntry = new TimeEntry(projectId, userId, LocalDate.parse("2017-01-08"), 8);
@@ -43,7 +40,7 @@ public class TimeEntryApiTest {
     @Before
     public void setUp() throws Exception {
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUrl(System.getenv(datasourceUrl));
+        dataSource.setUrl(System.getenv("SPRING_DATASOURCE_URL"));
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.execute("TRUNCATE time_entries");

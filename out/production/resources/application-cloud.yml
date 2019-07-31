@@ -2,4 +2,9 @@
 spring:
   application:
     name: pal-tracker
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
 welcome_message: "hello from cloud foundry/yaml!"
